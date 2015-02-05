@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.custom.Component</type>
+    <coordinates>
+      <x>1070</x>
+      <y>180</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes> 
+'BotUserInterface</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Component</type>
+    <coordinates>
+      <x>1070</x>
+      <y>480</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes> 
+'BotSimulator</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Component</type>
+    <coordinates>
+      <x>660</x>
+      <y>480</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes> 
+'BotProgrammer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1190</x>
+      <y>250</y>
+      <w>50</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=-(()-</panel_attributes>
+    <additional_attributes>30;30;30;230</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Component</type>
+    <coordinates>
+      <x>1480</x>
+      <y>480</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes> 
+'BotAutomator</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>830</x>
+      <y>500</y>
+      <w>260</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-(()-</panel_attributes>
+    <additional_attributes>30;30;240;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1240</x>
+      <y>500</y>
+      <w>260</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-(()-</panel_attributes>
+    <additional_attributes>240;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>730</x>
+      <y>200</y>
+      <w>360</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=-(()-</panel_attributes>
+    <additional_attributes>340;30;30;30;30;280</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1240</x>
+      <y>200</y>
+      <w>360</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=-(()-</panel_attributes>
+    <additional_attributes>30;30;340;30;340;280</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1240</x>
+      <y>360</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+SimController
+elementstyle=autoresize
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>780</x>
+      <y>330</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+CommandParser
+elementstyle=autoresize
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1440</x>
+      <y>340</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+AIProgrammer
+elementstyle=autoresize
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1320</x>
+      <y>470</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+SimAutomator
+elementstyle=autoresize
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1100</x>
+      <y>660</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+CommandAcceptor
+elementstyle=autoresize
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1820</x>
+      <y>0</y>
+      <w>560</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*SimController*
+--
++ setGridSize(sizeX: int, sizeY: int, sizeZ: int)
++ addPath(posX: int, posY: int, pos: int)
++ removePath(posX: int, posY: int, pos: int)
++ addRobot(botID: String, botTyp: RobotType, posX: int, posY: int, posZ: int)
++ removeRebot(botID: String)
++ addItem(itmID: String, itmTyp: ItemType, posX: int, posY: int, posZ: int)
++ removeItem(itmID: String)
++ queryLocationState(sizeX: int, sizeY: int, sizeZ: int): LocationState
++ runSimForward()
++ runSimBackward()
++ stopSim()
++ resetSim()
++ stepSimForward()
++ stepSimBackward()
++ speedUpSim()
++ slowDownSim()
++ clearSim()
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1820</x>
+      <y>330</y>
+      <w>560</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*SimProgrammer*
+--
++ programRobot(botID: String, botCmdType: RobotCommandType[*])
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1820</x>
+      <y>550</y>
+      <w>560</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*CommandParser*
+--
++ parseCommand(robotID: String, command: String)
++ setLanguage(language: LanguageType)
++ getProgram(robotID: String, program: String)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Component</type>
+    <coordinates>
+      <x>610</x>
+      <y>90</y>
+      <w>1130</w>
+      <h>690</h>
+    </coordinates>
+    <panel_attributes> 
+'Application</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>290</y>
+      <w>560</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*SimEventListener*
+--
++ notifyPathAdded(PathAddedSimEvent event)
++ notifyPathRemoved(PathRemovedSimEvent event)
++ notifyRobotAdded(RobotAddedSimEvent event)
++ notifyRobotRemoved(RobotRemovedSimEvent event)
++ notifyItemAdded(ItemAddedSimEvent event)
++ notifyItemRemoved(ItemRemovedSimEvent event)
++ notifyRobotMoved(RobotMovedSimEvent event)
++ notifyRobotWaited(RobotWaitedSimEvent event)
++ notifyRobotProgrammed(RobotProgrammedSimEvent event)
++ notifyGridSizeChanged(GridSizeChangedSimEvent event)
++ notifySimStateChanged(SimStateChangedSimEvent event)
++ notifyItemPickedFromPath(ItemPickedFromPathSimEvent event)
++ notifyItemDroppedOnPath(ItemDroppedOnPathSimEvent event)
++ notifyItemPickedFromContainer(ItemPickedFromContainerSimEvent event)
++ notifyItemDroppedInContainer(ItemDroppedInConatinerSimEvent event)
++ notifyRobotTurned(RobotTurnedSimEvent event)
++ notifyRobotOutOfBounds(RobotOutOfBoundsSimEvent event)
++ notifyRobotCollision(RobotCollisionSimEvent event)
++ notifyApplesInBins(ApplesInBinsSimEvent event)
++ notifySimStepChanged(SimStepChangedSimEvent event)
++ notifySimReset()
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1280</x>
+      <y>120</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+SimEventListener
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1140</x>
+      <y>110</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>140;30;30;30;30;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1110</x>
+      <y>250</y>
+      <w>50</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>30;30;30;230</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1000</x>
+      <y>360</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>SimEvent
+--
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1070</x>
+      <y>340</y>
+      <w>90</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>70;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1080</x>
+      <y>450</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>notifies
+elementstyle=autoresize
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1060</x>
+      <y>280</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>isNotified
+elementstyle=autoresize
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1820</x>
+      <y>430</y>
+      <w>560</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*SimAutomator*
+--
++ getAllPaths(): Path[*]
++ getAllRobots(): Robot[*]
++ getAllItems(): Item[*]
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1820</x>
+      <y>760</y>
+      <w>560</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*AIProgrammer*
+--
++ generateAutomatedCommands()
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>730</x>
+      <y>550</y>
+      <w>870</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-(()-</panel_attributes>
+    <additional_attributes>850;30;850;90;30;90;30;30</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>910</x>
+      <y>470</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+SimProgrammer
+elementstyle=autoresize
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1820</x>
+      <y>670</y>
+      <w>560</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*CommandAcceptor*
+--
++ acceptCommands(robotID: String, commands: RobotCommandType[*])
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

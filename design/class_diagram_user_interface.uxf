@@ -1,0 +1,2157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.2">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>996</y>
+      <w>100</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>*PathController*
+--
+
+--
++ mousePressed(e: MouseEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1236</x>
+      <y>996</y>
+      <w>104</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>/*MouseAdapter*/
+--
+
+--
+/+ mousePressed(e: MouseEvent)/
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1124</x>
+      <y>872</y>
+      <w>84</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>*Square*
+--
+Attributes
+--
++ getPositionX()
++ getPositionY()
++ getPositionZ()
++ getID()
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>492</x>
+      <y>552</y>
+      <w>116</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*GridResizeController*
+--
+Attributes
+--
++ actionPerformed(arg0: ActionEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>652</y>
+      <w>84</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>*GridPanel*
+--
+Attributes
+--
++ addGridLayers(x: int, y: int, z: int)
++ setGrid(setX: int, setY: int, setZ: int)
++ redrawGrid()
++ getSquare(id: String): Square
++ getAllSquares(): Square[0..*]
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>692</x>
+      <y>552</y>
+      <w>64</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>*GridResizePanel*
+--
+
+--
++ getInputX()
++ getInputY()
++ getInputZ()
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>552</y>
+      <w>84</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>*BotUserInterface*
+--
+Attributes
+--
++ getSimListener()
++ getGridPanelView()
++ getMenuPanelView()
++ getButtonPanelView()
++ setDividerSplitPane(i: int)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>784</x>
+      <y>552</y>
+      <w>120</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>*MenuPanel*
+--
+Attributes
+--
++ getGridResizePanel(): GridResizePanel
++ getOutputPanel(): OutputPanel
++ getRobotProgrammerPanel(): RobotProgrammerPanel
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1204</x>
+      <y>568</y>
+      <w>84</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>*SimListener*
+--
+
+--
+
+
+
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1184</x>
+      <y>484</y>
+      <w>48</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*JFrame*
+--
+
+--
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1136</x>
+      <y>500</y>
+      <w>80</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>72;12;72;32;12;32;12;52</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1112</x>
+      <y>608</y>
+      <w>20</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=  1
+m2=  1</panel_attributes>
+    <additional_attributes>12;12;12;44</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1112</x>
+      <y>708</y>
+      <w>64</w>
+      <h>172</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=  1
+m2=  *</panel_attributes>
+    <additional_attributes>12;12;12;136;56;136;56;164</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1316</x>
+      <y>572</y>
+      <w>80</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*SimEventListener*
+--
+
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1152</x>
+      <y>572</y>
+      <w>60</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=  1
+m2=  1</panel_attributes>
+    <additional_attributes>12;12;52;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1276</x>
+      <y>572</y>
+      <w>48</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>40;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>892</x>
+      <y>572</y>
+      <w>196</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=  1
+m2=  1</panel_attributes>
+    <additional_attributes>188;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1208</x>
+      <y>1000</y>
+      <w>36</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>28;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1156</x>
+      <y>928</y>
+      <w>20</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>12;12;12;68</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>744</x>
+      <y>552</y>
+      <w>48</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>40;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>596</x>
+      <y>544</y>
+      <w>40</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>12;12;32;12</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>376</x>
+      <y>552</y>
+      <w>80</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*ActionListener*
+--
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>444</x>
+      <y>544</y>
+      <w>56</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>12;12;48;12</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>628</x>
+      <y>552</y>
+      <w>40</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>*JButton*
+--
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>628</x>
+      <y>576</y>
+      <w>40</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>*JTextField*
+--
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>656</x>
+      <y>544</y>
+      <w>44</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>36;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>656</x>
+      <y>568</y>
+      <w>44</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=3</panel_attributes>
+    <additional_attributes>36;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1376</x>
+      <y>924</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>/*Render*/
+--
+
+--
+/+ renderGraphics(square: Square, graphics: Graphics)/
+
+
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1196</x>
+      <y>592</y>
+      <w>80</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>12;312;72;312;72;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1196</x>
+      <y>916</y>
+      <w>188</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=  1
+m2=  1</panel_attributes>
+    <additional_attributes>12;12;180;12</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1376</x>
+      <y>996</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*EmptySquare*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1456</x>
+      <y>996</y>
+      <w>76</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>/*SquareDecorator*/
+--
+
+--
++ callRender(square: Square, graphics: Graphics)
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1400</x>
+      <y>944</y>
+      <w>52</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>44;12;44;36;12;36;12;52</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1448</x>
+      <y>944</y>
+      <w>52</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;12;36;44;36;44;52</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1516</x>
+      <y>916</y>
+      <w>44</w>
+      <h>92</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
+m1=  1
+m2=*</panel_attributes>
+    <additional_attributes>16;84;36;84;36;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1384</x>
+      <y>1084</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*PathSquare*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1308</x>
+      <y>1084</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*RobotImage*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1680</x>
+      <y>1084</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*AppleImage*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1408</x>
+      <y>1016</y>
+      <w>76</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>68;12;68;36;12;36;12;68</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1332</x>
+      <y>1016</y>
+      <w>148</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>140;12;140;32;12;32;12;68</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1512</x>
+      <y>1016</y>
+      <w>212</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;12;24;204;24;204;68</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1356</x>
+      <y>820</y>
+      <w>192</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>*RenderFactory*
+--
+_- instance: RenderFactory = null_
+--
+- RenderFactory()
+_+ getInstance(): RenderFactory_
++ createRender(renderType: RenderType): Render
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1196</x>
+      <y>852</y>
+      <w>224</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=  1
+m2=  1</panel_attributes>
+    <additional_attributes>12;64;216;64;216;12</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1452</x>
+      <y>864</y>
+      <w>24</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>creates
+elementstyle=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1440</x>
+      <y>852</y>
+      <w>20</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>12;72;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1264</x>
+      <y>592</y>
+      <w>100</w>
+      <h>244</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>92;236;12;236;12;12</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>716</y>
+      <w>72</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>*RightClickPopupMenu*
+--
+
+--
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>348</x>
+      <y>664</y>
+      <w>48</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*JPopupMenu*
+--
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>856</y>
+      <w>92</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*AddRemoveRobotCommand*
+--
+Attributes
+--
++ actionPerformed(e: ActionEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>856</y>
+      <w>92</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*AddRemoveAppleCommand*
+--
+Attributes
+--
++ actionPerformed(e: ActionEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>856</y>
+      <w>92</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*AddRemoveBinCommand*
+--
+Attributes
+--
++ actionPerformed(e: ActionEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>372</x>
+      <y>800</y>
+      <w>108</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;-</panel_attributes>
+    <additional_attributes>12;56;12;36;100;36;100;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>468</x>
+      <y>800</y>
+      <w>20</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;-</panel_attributes>
+    <additional_attributes>12;56;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>476</x>
+      <y>800</y>
+      <w>104</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;12;36;96;36;96;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>396</x>
+      <y>728</y>
+      <w>92</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
+
+</panel_attributes>
+    <additional_attributes>12;12;84;12;84;36</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>236</x>
+      <y>688</y>
+      <w>20</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;12;40</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>760</y>
+      <w>88</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>*SimController*
+--
+Attributes
+--
++ addRobot()
++ removeRobot()
++ addItem()
++ removeItem()
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>764</y>
+      <w>92</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>*AbstractAction*
+--
+
+--
++ actionPerformed(e: ActionEvent)
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>368</x>
+      <y>780</y>
+      <w>296</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=receiver</panel_attributes>
+    <additional_attributes>288;12;272;12;272;144;16;144;16;104</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>464</x>
+      <y>772</y>
+      <w>200</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=receiver</panel_attributes>
+    <additional_attributes>192;12;168;12;168;144;16;144;16;112</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>556</x>
+      <y>764</y>
+      <w>108</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=receiver</panel_attributes>
+    <additional_attributes>100;12;68;12;68;144;16;144;16;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>688</x>
+      <y>660</y>
+      <w>400</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-</panel_attributes>
+    <additional_attributes>392;12;12;12;12;100</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1528</x>
+      <y>1084</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*BinEmptyImage*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1504</x>
+      <y>1016</y>
+      <w>68</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;12;32;60;32;60;68</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1232</x>
+      <y>1084</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*RobotNumber*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1156</x>
+      <y>1084</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*ItemNumber*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1180</x>
+      <y>1016</y>
+      <w>292</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>284;12;284;24;12;24;12;68</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1196</x>
+      <y>1164</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*RobotHasAppleImage*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1256</x>
+      <y>1016</y>
+      <w>220</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>212;12;212;28;12;28;12;68</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1216</x>
+      <y>1016</y>
+      <w>272</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>264;12;264;116;12;116;12;148</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>692</x>
+      <y>448</y>
+      <w>80</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>*RobotProgrammerPanel*
+--
+
+--
++ getCommandInput()
++ updateComboBox()
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>440</y>
+      <w>44</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>*JComboBox*
+--
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>628</x>
+      <y>464</y>
+      <w>40</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>*JButton*
+--
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>628</x>
+      <y>488</y>
+      <w>40</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>*JTextField*
+--
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>656</x>
+      <y>440</y>
+      <w>44</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>36;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>656</x>
+      <y>460</y>
+      <w>44</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>36;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>656</x>
+      <y>484</y>
+      <w>44</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>36;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>492</x>
+      <y>464</y>
+      <w>116</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*RobotProgrammerController*
+--
+Attributes
+--
++ actionPerformed(arg0: ActionEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>376</x>
+      <y>464</y>
+      <w>80</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*ActionListener*
+--
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>444</x>
+      <y>456</y>
+      <w>56</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>12;12;48;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>596</x>
+      <y>456</y>
+      <w>40</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>12;12;32;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>760</x>
+      <y>472</y>
+      <w>48</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=   1
+m2=1</panel_attributes>
+    <additional_attributes>40;80;40;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>728</y>
+      <w>116</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*RightClickController*
+--
+Attributes
+--
++ mousePressed(e: MouseEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>296</x>
+      <y>728</y>
+      <w>48</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>12;12;40;12</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>664</y>
+      <w>100</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>/*MouseAdapter*/
+--
+
+--
+/+ mousePressed(e: MouseEvent)/
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>360</x>
+      <y>680</y>
+      <w>20</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;12;36</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1248</x>
+      <y>440</y>
+      <w>96</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>*RobotsOnGrid*
+--
+_- instance: RobotsOnGrid = null_
+--
+- RobotsOnGrid()
+_+ getInstance(): RobotsOnGrid_
++ addRobotToList(robotID: String)
++ getNewRobotID(): String
++ getAllRobotsOnGrid(): Collection
++ resetRobotID()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1360</x>
+      <y>440</y>
+      <w>96</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>*ItemsOnGrid*
+--
+_- instance: ItemsOnGrid = null_
+--
+- ItemsOnGrid()
+_+ getInstance(): ItemsOnGrid_
++ addItemToList(robotID: String)
++ getNewAppleID(): String
++ getNewBinID(): String
++ getAllItemsOnGrid(): Collection
++ resetAppleID()
++ resetBinID()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1028</x>
+      <y>484</y>
+      <w>136</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*WindowResizeController*
+--
+Attributes
+--
++ componentResized(arg0: ComponentEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1092</x>
+      <y>500</y>
+      <w>20</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>12;12;12;52</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1064</x>
+      <y>424</y>
+      <w>80</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*ComponentListener*
+--
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1092</x>
+      <y>440</y>
+      <w>20</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>12;12;12;44</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>796</x>
+      <y>876</y>
+      <w>120</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>*ButtonPanel*
+--
+Attributes
+--
++ updateSimStateLabel(simState: String)
++ setCounter(count: int)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>1008</y>
+      <w>92</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*PlayBackwardCommand*
+--
+Attributes
+--
++ actionPerformed(e: ActionEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>1008</y>
+      <w>92</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*PlayForwardCommand*
+--
+Attributes
+--
++ actionPerformed(e: ActionEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>864</x>
+      <y>1008</y>
+      <w>92</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*ResetCommand*
+--
+Attributes
+--
++ actionPerformed(e: ActionEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>964</x>
+      <y>1008</y>
+      <w>92</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*SlowDownCommand*
+--
+Attributes
+--
++ actionPerformed(e: ActionEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>1044</y>
+      <w>92</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*SpeedUpCommand*
+--
+Attributes
+--
++ actionPerformed(e: ActionEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>604</x>
+      <y>1044</y>
+      <w>92</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*StepBackwardCommand*
+--
+Attributes
+--
++ actionPerformed(e: ActionEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>704</x>
+      <y>1044</y>
+      <w>92</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*StepForwardCommand*
+--
+Attributes
+--
++ actionPerformed(e: ActionEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>804</x>
+      <y>1044</y>
+      <w>92</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*StopCommand*
+--
+Attributes
+--
++ actionPerformed(e: ActionEvent)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>368</x>
+      <y>804</y>
+      <w>312</w>
+      <h>212</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=receiver</panel_attributes>
+    <additional_attributes>304;12;304;184;16;184;16;204</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>468</x>
+      <y>804</y>
+      <w>220</w>
+      <h>212</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=receiver</panel_attributes>
+    <additional_attributes>212;12;212;192;16;192;16;204</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>708</x>
+      <y>804</y>
+      <w>210</w>
+      <h>212</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=receiver</panel_attributes>
+    <additional_attributes>12;12;12;192;200;192;200;204</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>528</x>
+      <y>804</y>
+      <w>168</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=receiver</panel_attributes>
+    <additional_attributes>160;12;160;200;16;200;16;240</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>632</x>
+      <y>804</y>
+      <w>72</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=receiver</panel_attributes>
+    <additional_attributes>64;12;64;208;16;208;16;240</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>692</x>
+      <y>804</y>
+      <w>66</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=receiver</panel_attributes>
+    <additional_attributes>12;12;12;208;56;208;56;240</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>700</x>
+      <y>804</y>
+      <w>158</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=receiver</panel_attributes>
+    <additional_attributes>12;12;12;200;148;200;148;240</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>716</x>
+      <y>804</y>
+      <w>302</w>
+      <h>212</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=receiver</panel_attributes>
+    <additional_attributes>12;12;12;184;292;184;292;204</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>1120</y>
+      <w>92</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>*AbstractAction*
+--
+
+--
++ actionPerformed(e: ActionEvent)
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>372</x>
+      <y>1024</y>
+      <w>292</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;-</panel_attributes>
+    <additional_attributes>12;12;12;132;284;132</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>472</x>
+      <y>1024</y>
+      <w>192</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;-</panel_attributes>
+    <additional_attributes>12;12;12;124;184;124</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>736</x>
+      <y>1024</y>
+      <w>180</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;-</panel_attributes>
+    <additional_attributes>172;12;172;124;12;124</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>736</x>
+      <y>1024</y>
+      <w>280</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;-</panel_attributes>
+    <additional_attributes>272;12;272;132;12;132</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>532</x>
+      <y>1060</y>
+      <w>132</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;-</panel_attributes>
+    <additional_attributes>12;12;12;80;124;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>636</x>
+      <y>1060</y>
+      <w>64</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;-</panel_attributes>
+    <additional_attributes>12;12;12;40;56;40;56;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>696</x>
+      <y>1060</y>
+      <w>60</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;-</panel_attributes>
+    <additional_attributes>52;12;52;40;12;40;12;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>736</x>
+      <y>1060</y>
+      <w>120</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;-</panel_attributes>
+    <additional_attributes>112;12;112;80;12;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>688</x>
+      <y>892</y>
+      <w>384</w>
+      <h>304</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
+
+</panel_attributes>
+    <additional_attributes>228;12;376;12;376;296;12;296;12;276</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>840</x>
+      <y>608</y>
+      <w>264</w>
+      <h>276</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=  1
+m2=  1</panel_attributes>
+    <additional_attributes>256;12;256;32;12;32;12;268</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>692</x>
+      <y>340</y>
+      <w>64</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>*OutputPanel*
+--
+
+--
++ addText(string: String)
++ clearText()
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>744</x>
+      <y>352</y>
+      <w>76</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=   1
+m2=1</panel_attributes>
+    <additional_attributes>68;200;68;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1172</x>
+      <y>652</y>
+      <w>84</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>*SquareContentManager*
+--
+Attributes
+--
++ updateSquare(posX: int, posY: int, posZ: int)
++ updateAllSquares()
++ repaintUpdatedSquare(square: Square)
++ getSquareContents(square: Square)
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>732</x>
+      <y>708</y>
+      <w>468</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>12;60;460;60;460;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1152</x>
+      <y>600</y>
+      <w>48</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>40;52;40;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1196</x>
+      <y>592</y>
+      <w>72</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>12;304;64;304;64;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1212</x>
+      <y>592</y>
+      <w>20</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=  1
+m2=  1</panel_attributes>
+    <additional_attributes>12;60;12;12</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1604</x>
+      <y>1084</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*BinFullImage*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1508</x>
+      <y>1016</y>
+      <w>136</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;12;28;128;28;128;68</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1272</x>
+      <y>1164</y>
+      <w>88</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*RobotHasAppleImageWest*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1364</x>
+      <y>1164</y>
+      <w>88</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*RobotHasAppleImageEast*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1456</x>
+      <y>1164</y>
+      <w>88</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*RobotHasAppleImageNorth*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1548</x>
+      <y>1164</y>
+      <w>88</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*RobotHasAppleImageSouth*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1304</x>
+      <y>1016</y>
+      <w>188</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180;12;180;120;12;120;12;148</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1396</x>
+      <y>1016</y>
+      <w>100</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>92;12;92;124;12;124;12;148</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1480</x>
+      <y>1016</y>
+      <w>20</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;12;120;12;148</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1484</x>
+      <y>1016</y>
+      <w>112</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;12;124;104;124;104;148</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1640</x>
+      <y>1164</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*RobotImageWest*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1716</x>
+      <y>1164</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*RobotImageEast*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1792</x>
+      <y>1164</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*RobotImageNorth*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1868</x>
+      <y>1164</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*RobotImageSouth*
+--
+
+--
++ renderGraphics()
+
+
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1488</x>
+      <y>1016</y>
+      <w>192</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;12;120;184;120;184;148</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1492</x>
+      <y>1016</y>
+      <w>268</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;12;116;260;116;260;148</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1496</x>
+      <y>1016</y>
+      <w>340</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;12;112;332;112;332;148</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1500</x>
+      <y>1016</y>
+      <w>408</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;12;108;400;108;400;148</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1228</x>
+      <y>500</y>
+      <w>76</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>68;12;68;44;12;44;12;68</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1236</x>
+      <y>500</y>
+      <w>180</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>172;12;172;52;12;52;12;68</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>964</x>
+      <y>688</y>
+      <w>56</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>*JPanel*
+--
+elementstyle=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>760</x>
+      <y>464</y>
+      <w>228</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>220;224;220;196;220;164;220;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>744</x>
+      <y>344</y>
+      <w>252</w>
+      <h>352</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>244;344;244;324;244;292;244;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>708</x>
+      <y>592</y>
+      <w>352</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>312;104;344;104;344;20;12;20;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>892</x>
+      <y>584</y>
+      <w>172</w>
+      <h>124</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>128;116;164;116;164;12;12;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1008</x>
+      <y>692</y>
+      <w>80</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;72;12</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1008</x>
+      <y>696</y>
+      <w>124</w>
+      <h>188</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>12;12;48;12;48;180;116;180</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>904</x>
+      <y>700</y>
+      <w>96</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>88;12;88;192;12;192</additional_attributes>
+  </element>
+</diagram>

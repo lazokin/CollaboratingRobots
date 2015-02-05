@@ -1,0 +1,1780 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1890</x>
+      <y>320</y>
+      <w>500</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>*BotSimulator*
+--
+_- instance: BotSimulator = null_
+--
+- BotSimulator()
+_+ getInstance(): BotSimulator_
++ registerSimEventListener(listener: SimEventListener): boolean
++ unregisterSimEventListener(listener: SimEventListener): boolean
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2010</x>
+      <y>510</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*SimController*
+--
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2030</x>
+      <y>590</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*SimProgrammer*
+--
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2180</x>
+      <y>420</y>
+      <w>80</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+fg=default</panel_attributes>
+    <additional_attributes>30;190;60;190;60;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2200</x>
+      <y>420</y>
+      <w>80</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+fg=default</panel_attributes>
+    <additional_attributes>30;280;60;280;60;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2050</x>
+      <y>680</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*SimAutomator*
+--
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2160</x>
+      <y>420</y>
+      <w>80</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+fg=default</panel_attributes>
+    <additional_attributes>30;100;60;100;60;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>780</y>
+      <w>570</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>*RobotManager*
+--
+
+--
++ RobotManager()
++ addRobot(botID: String, botType: RobotType, posX: int, posY: int, posZ: int)
++ removeRebot(botID: String)
++ programRobot(botID: String, botCmds: RobotCommandType[*])
++ clearRobotCommands()
++ resetRobots()
++ stepRobotsForward(simStepCounter: int)
++ stepRobotsBackward(simStepCounter: int)
++ getRobot(botID: String): Robot
++ robotExists(botID: String): boolean
++ atLastCommand(): boolean
++ atFirstCommand(): boolean
++ clear()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1600</x>
+      <y>1180</y>
+      <w>380</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*PathManager*
+--
+
+--
++ PathManager()
++ addPath(posX: int. posY: int posZ: int)
++ removePath(posX: int. posY: int posZ: int)
++ getPath(posX: int. posY: int posZ: int): Path
++ pathExists(posX: int. posY: int posZ: int): boolean
++ clear()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2220</x>
+      <y>1150</y>
+      <w>370</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>*ItemManager*
+--
+
+--
++ ItemManager()
++ addItem(itmID: String, itmTyp: ItemType, posX: int, posY: int, posZ: int)
++ removeItem(itmID: String)
++ getItem(itmID: String): Item
++ itemExists(itmID: String): boolean
++ clear()
++ resetItems()
++ getAllApples(): Apple[*]
++ getAllBins(): Bin[*]
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2660</x>
+      <y>770</y>
+      <w>360</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>*SimulationManager*
+--
+
+--
++ setGridSize(sizeX: int, sizeY: int, sizeZ: int)
++ locationWithinGrid(x: int, y: int, z: int): boolean
++ setSimStateToRunning()
++ setSimStateToStopped()
++ setSimStateToLosing()
++ setSimStateToWinning()
++ runSimForward()
++ runForward()
++ runSimBackward()
++ runBackward()
++ stopSim()
++ stop()
++ resetSim()
++ reset()
++ stepSimForward()
++ stepForward()
++ stepSimBackward()
++ stepBackward()
++ speedUpSim()
++ speedUp()
++ slowDownSim()
++ slowDown()
++ checkForWin()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1620</x>
+      <y>840</y>
+      <w>310</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=  1
+m2=   1
+fg=default</panel_attributes>
+    <additional_attributes>290;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1750</x>
+      <y>970</y>
+      <w>180</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=  1
+m2=   1
+fg=default</panel_attributes>
+    <additional_attributes>160;30;30;30;30;210</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2320</x>
+      <y>970</y>
+      <w>100</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=  1
+m2=   1
+fg=default</panel_attributes>
+    <additional_attributes>30;30;80;30;80;180</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2320</x>
+      <y>830</y>
+      <w>360</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=  1
+m2=   1
+fg=default</panel_attributes>
+    <additional_attributes>30;30;340;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2550</x>
+      <y>290</y>
+      <w>640</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>*SimEventDispatcher*
+--
+_- instance: SimEventDispatcher = null_
+--
+- SimEventDispatcher()
+_+ getInstance(): SimEventDispatcher_
++ registerSimEventListener(listener: SimEventListener): boolean
++ unregisterSimEventListener(listener: SimEventListener): boolean
++ notifyPathAdded(path: Path)
++ notifyPathRemoved(path: Path)
++ notifyRobotAdded(bot: Robot)
++ notifyRobotRemoved(bot: Robot)
++ notifyItemAdded(item: Item)
++ notifyItemRemoved(item: Item)
++ notifyRobotMoved(bot: Robot)
++ notifyRobotWaited(bot: Robot)
++ notifyGridSizeChanged(sizeX: int, sizeY: int, sizeZ: int)
++ notifyRobotProgrammed(bot: Robot, botCmdTyps: RobotCommandType[*])
++ notifySimStateChanged(simState: SimState)
++ notifyItemPickedFromPath(bot: Robot, carryItm, CarryableItem)
++ notifyItemDroppedOnPath(bot: Robot, carryItm, CarryableItem)
++ notifyItemPickedFromContainer(bot: Robot, carryItm, CarryableItem, cont: Container)
++ notifyItemDroppedInContainer(bot: Robot, carryItm, CarryableItem, cont: Container)
++ notifyRobotTurned(bot: Robot)
++ notifyRobotOutOfBounds(bot: Robot, posX: int, posY: int, posZ: int)
++ notifyRobotCollision(bot: Robot, bot: Robot, posX: int, posY: int, posZ: int)
++ notifyApplesInBins(message: String)
++ notifySimStepChanged(step: simStepCounter)
++ notifySimReset()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2360</x>
+      <y>360</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=  1
+m2=  1
+fg=default</panel_attributes>
+    <additional_attributes>30;30;190;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3280</x>
+      <y>470</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*&lt;&lt;Interface&gt;&gt;*
+*SimEventListener*
+--
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>3160</x>
+      <y>460</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
+m1=   1
+m2=   *
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>30;30;120;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1170</x>
+      <y>1100</y>
+      <w>370</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>*RobotFactory*
+--
+
+--
++ RobotFactory()
++ createRobot(botID: String, botType: RobotType, posX: int, posY: int, posZ: int): Robot
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>1020</y>
+      <w>430</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>/*Robot*/
+--
+- robotType: RobotType
+- commandStepCounter: int
+--
++ setCurrentHeadingToNorth()
++ setCurrentHeadingToSouth()
++ setCurrentHeadingToWest()
++ setCurrentHeadingToEast()
++ pickUpCarryableItem(item: CarryableItem)
++ dropCarryableItem()
++ hasCarryableItem(): boolean
++ moveBy(distX: int, distY: int. distZ: int)
++ moveTo(posX: int, posY: int. posZ: int)
++ addRobotCommand(botCmd: RobotCommand): boolean
++ hasNextCommand(): boolean
++ hasPreviousCommand(): boolean
++ clearCommands()
++ reset()
++ executeNextCommand(simStepCounter: int)
++ reversePreviousCommand(simStepCounter: int)
++ executeNextCommand()
++ reversePreviousCommand()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1620</x>
+      <y>1590</y>
+      <w>330</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>*SimObject*
+--
+- objID: String
+- posX: int, posY: int, posZ: int
+- prevPosX: int, prevPosY: int, prevPosZ: int
+- startPosX: int, startPosY: int, startPosZ: int
+--
++ moveBy(distX: int, distY: int. distZ: int)
++ moveTo(posX: int, posY: int. posZ: int)
++ reset()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>1020</y>
+      <w>230</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*BasicAndroid*
+--
+
+--
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>970</x>
+      <y>1090</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=default</panel_attributes>
+    <additional_attributes>30;30;200;30</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1080</x>
+      <y>1120</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>creates
+elementstyle=autoresize
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>490</x>
+      <y>1020</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=default</panel_attributes>
+    <additional_attributes>80;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1330</x>
+      <y>1010</y>
+      <w>50</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=   1
+m2=   1
+fg=default</panel_attributes>
+    <additional_attributes>30;30;30;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>940</x>
+      <y>850</y>
+      <w>160</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
+m1=1
+m2=   *
+fg=default</panel_attributes>
+    <additional_attributes>140;30;30;30;30;170</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>810</x>
+      <y>1340</y>
+      <w>820</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;
+fg=default</panel_attributes>
+    <additional_attributes>810;270;30;270;30;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>620</y>
+      <w>260</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>/*RobotCommand*/
+--
+- robot: Robot
+--
+/+ execute()/
+/+ reverse()/
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1160</x>
+      <y>610</y>
+      <w>400</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>*RobotCommandFactory*
+--
+
+--
++ RobotCommandFactory()
++ createCommand(botCmdTyp: RobotCommandType, bot: Robot): RobotCommand
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1330</x>
+      <y>690</y>
+      <w>50</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=   1
+m2=   1
+fg=default</panel_attributes>
+    <additional_attributes>30;90;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>940</x>
+      <y>630</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=default</panel_attributes>
+    <additional_attributes>30;30;220;30</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>990</x>
+      <y>630</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>creates
+elementstyle=autoresize
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>810</x>
+      <y>690</y>
+      <w>50</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=   1
+m2=   *
+fg=default</panel_attributes>
+    <additional_attributes>30;330;30;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>250</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*MoveNorthCommand*
+--
+- robot: Robot
+--
++ execute()
++ reverse()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>250</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*MoveSouthCommand*
+--
+- robot: Robot
+--
++ execute()
++ reverse()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>360</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*MoveEastCommand*
+--
+- robot: Robot
+--
++ execute()
++ reverse()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>360</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*MoveWestCommand*
+--
+- robot: Robot
+--
++ execute()
++ reverse()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>140</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*MoveUpCommand*
+--
+- robot: Robot
+--
++ execute()
++ reverse()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>140</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*MoveDownCommand*
+--
+- robot: Robot
+--
++ execute()
++ reverse()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>30</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*PickCommand*
+--
+- robot: Robot
+--
++ execute()
++ reverse()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>30</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*DropCommand*
+--
+- robot: Robot
+--
++ execute()
++ reverse()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>710</x>
+      <y>10</y>
+      <w>150</w>
+      <h>630</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>130;610;130;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>470</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*WaitCommand*
+--
+- robot: Robot
+--
++ execute()
++ reverse()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1700</x>
+      <y>1470</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Path*
+--
+
+--
+
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1750</x>
+      <y>1370</y>
+      <w>40</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
+m1=   1
+m2=   *
+fg=default</panel_attributes>
+    <additional_attributes>30;30;30;100</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3120</x>
+      <y>770</y>
+      <w>260</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>/*SimState*/
+--
+# simState: SimStateType
+--
+/+ runSimForward()/
+/+ runSimBackward()/
+/+ stopSim()/
+/+ resetSim()/
+/+ stepSimForward()/
+/+ stepSimBackward()/
+/+ speedUpSim()/
+/+ slowDownSim()/
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2990</x>
+      <y>760</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=  1
+m2=1
+fg=default</panel_attributes>
+    <additional_attributes>30;30;130;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3480</x>
+      <y>770</y>
+      <w>260</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>/*SimStateRunning*/
+--
+
+--
++ runSimForward()
++ runSimBackward()
++ stopSim()
++ resetSim()
++ stepSimForward()
++ stepSimBackward()
++ speedUpSim()
++ slowDownSim()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>3350</x>
+      <y>750</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;
+fg=default</panel_attributes>
+    <additional_attributes>30;30;130;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3480</x>
+      <y>970</y>
+      <w>260</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>/*SimStateStopped*/
+--
+
+--
++ runSimForward()
++ runSimBackward()
++ stopSim()
++ resetSim()
++ stepSimForward()
++ stepSimBackward()
++ speedUpSim()
++ slowDownSim()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3480</x>
+      <y>1170</y>
+      <w>260</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>/*SimStateWinning*/
+--
+
+--
++ runSimForward()
++ runSimBackward()
++ stopSim()
++ resetSim()
++ stepSimForward()
++ stepSimBackward()
++ speedUpSim()
++ slowDownSim()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3480</x>
+      <y>1370</y>
+      <w>260</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>/*SimStateLosing*/
+--
+
+--
++ runSimForward()
++ runSimBackward()
++ stopSim()
++ resetSim()
++ stepSimForward()
++ stepSimBackward()
++ speedUpSim()
++ slowDownSim()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>1100</y>
+      <w>230</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*FastAndroid*
+--
+
+--
++ executeNextCommand()
++ reversePreviousCommand()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>490</x>
+      <y>1100</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=default</panel_attributes>
+    <additional_attributes>80;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2200</x>
+      <y>1530</y>
+      <w>190</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>/*Item*/
+--
+# itemType: ItemType
+--
++ reset()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2040</x>
+      <y>1690</y>
+      <w>220</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>/*CarryableItem*/
+--
+
+--
++ hasCarrier(): boolean
++ hasContainer(): boolean
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2350</x>
+      <y>1690</y>
+      <w>320</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>/*ItemContainer*/
+--
+
+--
++ addCarryableItem(item: CarryableItem)
++ removeCarryableItem()
++ hasCarryableItem(): boolean
++ reset
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2110</x>
+      <y>1390</y>
+      <w>370</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*ItemFactory*
+--
+
+--
++ createItem(itemID: String, itemType: ItemType, posX: int, posY: int, posZ: int): Robot
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2120</x>
+      <y>1260</y>
+      <w>120</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=   1
+fg=default</panel_attributes>
+    <additional_attributes>100;30;30;30;30;130</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2260</x>
+      <y>1450</y>
+      <w>40</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fg=default</panel_attributes>
+    <additional_attributes>30;80;30;30</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>2230</x>
+      <y>1480</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>creates
+elementstyle=autoresize
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1920</x>
+      <y>1580</y>
+      <w>290</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;
+fg=default</panel_attributes>
+    <additional_attributes>280;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2200</x>
+      <y>1600</y>
+      <w>40</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=default</panel_attributes>
+    <additional_attributes>30;30;30;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2340</x>
+      <y>1600</y>
+      <w>40</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=default</panel_attributes>
+    <additional_attributes>30;30;30;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1750</x>
+      <y>1510</y>
+      <w>40</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;&gt;
+fg=default</panel_attributes>
+    <additional_attributes>30;30;30;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2230</x>
+      <y>1670</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
+m1=1
+m2=1
+fg=default</panel_attributes>
+    <additional_attributes>120;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2450</x>
+      <y>1860</y>
+      <w>120</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Bin*
+--
+
+--
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2480</x>
+      <y>1780</y>
+      <w>40</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+fg=default</panel_attributes>
+    <additional_attributes>30;30;30;80</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2140</x>
+      <y>1860</y>
+      <w>120</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Apple*
+--
+
+--
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2170</x>
+      <y>1780</y>
+      <w>40</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+fg=default</panel_attributes>
+    <additional_attributes>30;30;30;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>700</x>
+      <y>1340</y>
+      <w>1350</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
+m1=   1
+m2=  1
+fg=default</panel_attributes>
+    <additional_attributes>30;30;30;430;1340;430</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>3350</x>
+      <y>770</y>
+      <w>140</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;
+fg=default</panel_attributes>
+    <additional_attributes>30;30;110;30;110;210;130;210</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>3350</x>
+      <y>790</y>
+      <w>140</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;
+fg=default</panel_attributes>
+    <additional_attributes>30;30;90;30;90;390;130;390</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>3350</x>
+      <y>810</y>
+      <w>140</w>
+      <h>580</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;
+fg=default</panel_attributes>
+    <additional_attributes>30;30;70;30;70;570;130;570</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1910</x>
+      <y>780</y>
+      <w>440</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>*SimCoordinator*
+--
+_- instance: SimulationManager = null_
+--
+- SimulationManager()
+_+ getInstance(): SimulationManager_
++ atLastCommand(): boolean
++ atFirstCommand(): boolean
++ resetPaths()
++ resetRobots()
++ resetItems()
++ stepRobotsForward(simCounter: int)
++ stepRobotsBackward(simCounter: int)
++ locationWithinGrid(xPos: int, yPos: int, zPos: int): boolean
++ getPath(xPos: int, yPos: int, zPos: int): Path
++ pathExists(xPos: int, yPos: int, zPos: int): boolean
++ getAllApples(): Apple[*]
++ getAllBins(): Bin[*]
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2270</x>
+      <y>420</y>
+      <w>50</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=  1
+m2=   1
+fg=default</panel_attributes>
+    <additional_attributes>30;30;30;360</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1950</x>
+      <y>490</y>
+      <w>80</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+fg=default</panel_attributes>
+    <additional_attributes>60;30;30;30;30;290</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1970</x>
+      <y>580</y>
+      <w>80</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+fg=default</panel_attributes>
+    <additional_attributes>60;30;30;30;30;200</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1990</x>
+      <y>670</y>
+      <w>80</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+fg=default</panel_attributes>
+    <additional_attributes>60;30;30;30;30;110</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>710</x>
+      <y>120</y>
+      <w>130</w>
+      <h>520</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>110;500;110;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>710</x>
+      <y>230</y>
+      <w>110</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>90;390;90;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>710</x>
+      <y>340</y>
+      <w>90</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>70;280;70;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>710</x>
+      <y>450</y>
+      <w>70</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>50;170;50;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>830</x>
+      <y>10</y>
+      <w>140</w>
+      <h>630</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>30;610;30;30;120;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>850</x>
+      <y>120</y>
+      <w>120</w>
+      <h>520</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>30;500;30;30;100;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>870</x>
+      <y>230</y>
+      <w>100</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>30;390;30;30;80;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>890</x>
+      <y>340</y>
+      <w>80</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>30;280;30;30;60;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2360</x>
+      <y>1330</y>
+      <w>190</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-&gt;
+m1=   1
+m2=   *
+fg=default</panel_attributes>
+    <additional_attributes>180;30;180;210;30;210</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>1360</y>
+      <w>270</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>/*RobotHeading*/
+--
+# robotHeading: RobotHeadingType
+--
+/+ moveForward()/
+/+ moveBackward()/
+/+ turnRight()/
+/+ turnLeft()/
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>1590</y>
+      <w>160</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>/*NorthHeading*/
+--
+
+--
++ moveForward()
++ moveBackward()
++ turnRight()
++ turnLeft()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>330</x>
+      <y>1240</y>
+      <w>260</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=  1
+fg=default</panel_attributes>
+    <additional_attributes>240;30;30;30;30;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>1450</y>
+      <w>40</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;
+fg=default</panel_attributes>
+    <additional_attributes>30;30;30;140</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>1590</y>
+      <w>160</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>/*EastHeading*/
+--
+
+--
++ moveForward()
++ moveBackward()
++ turnRight()
++ turnLeft()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>180</x>
+      <y>1590</y>
+      <w>160</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>/*SouthHeading*/
+--
+
+--
++ moveForward()
++ moveBackward()
++ turnRight()
++ turnLeft()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>1590</y>
+      <w>160</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>/*WestHeading*/
+--
+
+--
++ moveForward()
++ moveBackward()
++ turnRight()
++ turnLeft()
+elementstyle=wordwrap
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>60</x>
+      <y>1420</y>
+      <w>170</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;
+fg=default</panel_attributes>
+    <additional_attributes>160;30;30;30;30;170</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>400</x>
+      <y>1450</y>
+      <w>40</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;
+fg=default</panel_attributes>
+    <additional_attributes>30;30;30;140</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>460</x>
+      <y>1420</y>
+      <w>170</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;
+fg=default</panel_attributes>
+    <additional_attributes>30;30;160;30;160;170</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>550</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*MoveForward*
+--
+- robot: Robot
+--
++ execute()
++ reverse()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>660</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*MoveBackward*
+--
+- robot: Robot
+--
++ execute()
++ reverse()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>770</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*TurnRight*
+--
+- robot: Robot
+--
++ execute()
++ reverse()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>880</y>
+      <w>250</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*TurnLeft*
+--
+- robot: Robot
+--
++ execute()
++ reverse()
+elementstyle=wordwrap
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>370</x>
+      <y>600</y>
+      <w>360</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>340;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>370</x>
+      <y>640</y>
+      <w>360</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>340;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>370</x>
+      <y>690</y>
+      <w>380</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>360;30;360;90;30;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>370</x>
+      <y>690</y>
+      <w>440</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bg=default
+fg=default</panel_attributes>
+    <additional_attributes>420;30;420;200;30;200</additional_attributes>
+  </element>
+</diagram>
